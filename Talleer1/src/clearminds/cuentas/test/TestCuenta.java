@@ -23,7 +23,7 @@ public class TestCuenta {
 		cuenta1.imprimir();
 		cuenta2.imprimir();
 		cuenta3.imprimir();
-		System.out.println("-------------Valores modificados----------");
+		System.out.println("----------Valores modificados----------");
 		cuenta1.setSaldo(444);
 		cuenta3.setSaldo(567);
 		cuenta2.setTipo("D");
