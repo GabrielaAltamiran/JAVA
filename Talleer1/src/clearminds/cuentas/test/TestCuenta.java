@@ -8,7 +8,9 @@ public class TestCuenta {
 		Cuenta cuenta1 = new Cuenta("03476");
 		cuenta1.setSaldo(675);
 		Cuenta cuenta2 = new Cuenta("03476", "C", 39);
+		//-----------------------------------------------
 		Cuenta cuenta3 = new Cuenta("03476");
+		cuenta3.setTipo("C");
 		//Crear cuenta 4
 		Cuenta cuenta4 = new Cuenta("0987");
 		cuenta4.setSaldo(10);
@@ -18,7 +20,6 @@ public class TestCuenta {
 		Cuenta cuenta6 = new Cuenta("0666");
 		cuenta6.setSaldo(0);
 		//--------------------------------
-		cuenta3.setTipo("C");
 		System.out.println("------------Valores iniciales-------------");
 		cuenta1.imprimir();
 		cuenta2.imprimir();
