@@ -31,6 +31,13 @@ public class Contacto {
 	public void setPeso(double peso) {
 		this.peso = peso;
 	}
+	public boolean isActivo() {
+		return activo;
+	}
+	public void setActivo(boolean activo) {
+		this.activo = activo;
+	}
+	
 	
 	
 }
