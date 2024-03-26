@@ -1,3 +1,10 @@
+package com.krakedev.Test;
+
+import com.krakedev.entodades.Curso;
+import com.krakedev.entodades.Estudiante;
+import com.krakedev.entodades.Materia;
+import com.krakedev.entodades.Nota;
+
 public class CursoTest {
 
 	public static void main(String[] args) {
@@ -36,7 +43,7 @@ public class CursoTest {
 		     curso1.matricularEstudiante(estudiante);
 		     curso1.matricularEstudiante(estudiante2);
 		     
-		     System.out.println(curso1.getEstudiantes().size());
+		     System.out.println(curso1.getEstudiante().size());
 		     
 		     System.out.println(curso1.calcularPromedioCurso());
 
