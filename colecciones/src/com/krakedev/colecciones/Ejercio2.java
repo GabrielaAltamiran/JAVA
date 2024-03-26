@@ -12,10 +12,9 @@ public class Ejercio2 {
 		personas.add(new Persona("Gaby","Altamirano"));
 		personas.add(new Persona("Wendy","Tubay"));
 		
-		Persona elementoPersona;
+		System.out.println(personas.size());
 		for(int i=0;i<personas.size();i++) {
-			elementoPersona=personas.get(i);
-			System.out.println(elementoPersona.getNombre()+"-"+elementoPersona.getApellido());
+					
 		}
 		
 		
