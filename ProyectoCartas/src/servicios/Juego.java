@@ -67,17 +67,18 @@ public class Juego {
 	}
 
 	public String determinarGanador() {
-		String idGanador = " ";
+		String idGanador = "";
 		int sumaGanador = -1;
+
 		for (int i = 0; i < cartasJugadores.size(); i++) {
-			int sumarJugador = devolverTotal("Jugador: "+(i + 1));
-			if (sumarJugador >= sumaGanador) {
-				sumaGanador = sumarJugador;
-				idGanador = "Jugador" + (i + 1);
+			int sumaJugador = devolverTotal("jugador " + (i + 1));
+			if (sumaJugador >= sumaGanador) {
+				sumaGanador = sumaJugador;
+				idGanador = "jugador " + (i + 1);
 			}
 		}
-		return idGanador;
 
+		return idGanador;
 	}
 
 }
