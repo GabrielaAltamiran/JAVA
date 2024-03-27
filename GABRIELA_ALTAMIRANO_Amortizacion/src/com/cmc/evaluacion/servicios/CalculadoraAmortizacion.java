@@ -1,8 +1,12 @@
 package com.cmc.evaluacion.servicios;
 
+import java.util.ArrayList;
+
 import com.cmc.evaluacion.entidades.Prestamo;
 
 public class CalculadoraAmortizacion {
+	//--------------------------------
+	public ArrayList<Prestamo> Prestamo;
 	public static double calcularCuota(Prestamo prestamo) {
 		//Monto
 		double co = prestamo.getMonto();
