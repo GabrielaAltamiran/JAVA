@@ -1,6 +1,6 @@
 package com.test;
 
-import com.entidades.Random;
+import entidades.Random;
 
 public class TestRandom {
 
