@@ -25,4 +25,5 @@ public class Numero {
 	public void mostrarInformacion() {
 		System.out.println(numeroCarta+"-"+valor);
 	}
+
 }
