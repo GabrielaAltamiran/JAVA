@@ -12,7 +12,7 @@ public class TestActualizar {
 
 	public static void main(String[] args) {
 		EstadoCivil ec = new EstadoCivil("U", "Union Libre");
-		Persona p = new Persona("1231540912","Tatiana","Bojaca",ec);
+		Persona p = new Persona("1231540912","Tatian","Bojaca",ec);
 		try {
 			Date fechaDate = Convertidor.convertirFecha(" 2024/07/29");
 			Date horaDate = Convertidor.convertiHora(" 11:15:34");

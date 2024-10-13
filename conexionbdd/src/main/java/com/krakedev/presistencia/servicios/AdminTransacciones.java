@@ -27,8 +27,8 @@ public class AdminTransacciones {
 			ps.setString(2, transaccion.getNumero_cuenta());
 			ps.setBigDecimal(3, transaccion.getMonto());
 			ps.setString(4, transaccion.getTipo());
-			ps.setDate(5, new java.sql.Date(transaccion.getHora().getTime()));
-			ps.setTime(6, new Time(transaccion.getFecha().getTime()));
+			ps.setDate(5, new java.sql.Date(transaccion.getFecha().getTime()));
+			ps.setTime(6, new Time(transaccion.getHora().getTime()));
 			ps.executeUpdate();
 
 		} catch (Exception e) {
@@ -57,8 +57,8 @@ public class AdminTransacciones {
 			ps.setString(1, transaccion.getNumero_cuenta());
 			ps.setBigDecimal(2, transaccion.getMonto());
 			ps.setString(3, transaccion.getTipo());
-			ps.setDate(4, new java.sql.Date(transaccion.getHora().getTime()));
-			ps.setTime(5, new Time(transaccion.getFecha().getTime()));
+			ps.setDate(4, new java.sql.Date(transaccion.getFecha().getTime()));
+			ps.setTime(5, new Time(transaccion.getHora().getTime()));
 			ps.setInt(6, transaccion.getCodigo());
 			ps.executeUpdate();
 			

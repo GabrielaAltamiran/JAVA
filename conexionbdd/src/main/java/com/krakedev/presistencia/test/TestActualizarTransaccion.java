@@ -13,7 +13,7 @@ public class TestActualizarTransaccion {
 		Transacciones t = new Transacciones(29, "12389", new BigDecimal(12863.87), "D");
 		try {
 			Date fechaDate = Convertidor.convertirFecha(" 2020/03/07");
-			Date horaDate = Convertidor.convertiHora(" 20:43:12");
+			Date horaDate = Convertidor.convertiHora(" 21:43:12");
 			
 			t.setHora(horaDate);
 			t.setFecha(fechaDate);
