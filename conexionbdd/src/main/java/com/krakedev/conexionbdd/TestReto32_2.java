@@ -23,7 +23,7 @@ public class TestReto32_2 {
 			System.out.println("Conexion exitosa");
 			
 			ps = conection.prepareStatement(
-					"insert into transacciones(codigo,numero_cuenta,monto,tipo,fecha,hota)"
+					"insert into transacciones(codigo,numero_cuenta,monto,tipo,fecha,hora)"
 							+ "values (?,?,?,?,?,?)");
 			ps.setInt(1, 56);
 			ps.setString(2, "22187");

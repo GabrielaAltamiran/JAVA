@@ -23,8 +23,8 @@ public class TestReto32 {
 			System.out.println("Conexion exitosa");
 			
 			ps = conection.prepareStatement(
-					"insert into personas(cedula,nombre,apellido,numero_hijos,estatura,cantidad_ahorrada,fecha_nacimiento,hora_nacimiento)"
-							+ "values (?,?,?,?,?,?,?,?)");
+					"insert into personas(cedula,nombre,apellido,numero_hijos,estatura,cantidad_ahorrada,fecha_nacimiento,hora_nacimiento,codigo_estado_civil)"
+							+ "values (?,?,?,?,?,?,?,?,?)");
 			
 			
 			ps.setString(1, "1714616123"); // El insert en pgAdmin4 debe estar eliminado o no debe tener la misma llave
@@ -34,6 +34,7 @@ public class TestReto32 {
 			ps.setInt(4, 2);
 			ps.setDouble(5, 1.45);
 			ps.setBigDecimal(6, new BigDecimal(12098.98)); // Ayuda para cuando es una valor Money usamos "new  BigDecimal(12098.98)"
+			ps.setString(9, "U");
 			
 			
 			
