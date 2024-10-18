@@ -1,0 +1,5 @@
+package com.krakedev.presistencia.servicios;
+
+public class AdminTransacciones {
+
+}

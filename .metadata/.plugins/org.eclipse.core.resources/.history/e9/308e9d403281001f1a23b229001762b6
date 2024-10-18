@@ -1,0 +1,12 @@
+package com.krakedev.ejemplojunit;
+
+public class TestRestar {
+
+	public static void main(String[] args) {
+		Calculadora cal = new Calculadora();
+		cal.resta(32.5, 17.6);
+		System.out.println("La resta es: "+cal);
+
+	}
+
+}

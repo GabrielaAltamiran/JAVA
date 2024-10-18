@@ -1,0 +1,36 @@
+package com.krakedev.presistencia.servicios;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.Time;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import com.krakedev.presistencia.entidades.Transacciones;
+import com.krakedev.presitencia.utils.Conexionbdd;
+
+
+public class AdminTransacciones {
+	private static final Logger LOGGER=LogManager.getLogger(AdminTransacciones.class);
+	public static void insertar(Transacciones transaccion)throws Exception  {
+		Connection con = null;
+		PreparedStatement ps;
+		LOGGER.trace("Persona a insertar>>>> "+transaccion);
+		try {
+			con = Conexionbdd.conectar();
+			ps = con.prepareStatement("codigo,numero_cuenta,monto,tipo,fecha,hora" + "values(?,?,?,?,?,?)");
+			ps.setInt(1, transaccion.getCodigo());
+			ps.setString(2, transaccion.getNumero_cuenta());
+			ps.setBigDecimal(3, transaccion.getMonto());
+			ps.setString(4, transaccion.getTipo());
+			ps.setDate(5, new java.sql.Date(transaccion.getHora().getTime()));
+			ps.setTime(6, new Time(transaccion.getFecha().getTime()));
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		
+	
+	}
+}

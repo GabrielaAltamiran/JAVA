@@ -1,0 +1,5 @@
+package com.krakedev.presitencia.utils;
+
+public class Conexionbdd {
+
+}

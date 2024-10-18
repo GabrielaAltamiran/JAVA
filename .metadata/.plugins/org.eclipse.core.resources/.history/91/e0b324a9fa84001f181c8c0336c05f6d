@@ -1,0 +1,21 @@
+package com.krakedev.conexionbdd;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class TestConexion {
+
+	public static void main(String[] args) {
+		Connection conection=null;
+		
+	try {
+		Class.forName("org.postgresql.Driver");
+		conection=DriverManager.getConnection("jdbc:postgresql://localhost:5433/ejercios", "postgres", "gabriela29");
+	} catch (ClassNotFoundException | SQLException e) {
+		e.printStackTrace();
+	}
+
+	}
+
+}

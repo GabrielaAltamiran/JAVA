@@ -1,0 +1,18 @@
+package com.krakedev.presistencia.entidades;
+
+import java.math.BigDecimal;
+import java.util.Date;
+
+public class Persona {
+	private String cedula;
+	private String nombre;
+	private String apellido;
+	private String registro_cicvil;
+	private int numero_hijos;
+	private double estatura;
+	private BigDecimal cantidadAhorrada;
+	private Date fecha_nacimiento;
+	private Date hora_nacimiento;
+	
+	
+}

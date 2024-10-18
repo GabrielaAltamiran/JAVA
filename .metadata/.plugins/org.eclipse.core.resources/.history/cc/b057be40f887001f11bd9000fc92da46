@@ -1,0 +1,13 @@
+package com.krakedev.presistencia.test;
+
+import com.krakedev.presistencia.entidades.Persona;
+import com.krakedev.presistencia.servicios.AdminPersonas;
+
+public class TestAdminPersona {
+
+	public static void main(String[] args) {
+
+		AdminPersonas.insertar(new Persona());
+	}
+
+}

@@ -1,0 +1,17 @@
+package com.krakedev.presistencia.servicios;
+
+import java.sql.Connection;
+
+import com.krakedev.presitencia.utils.Conexionbdd;
+
+public class AdminPersonas2 {
+
+	public static void main(String[] args) {
+		Connection con = Conexionbdd.conectar();
+		// con.prepareStatement("");
+		System.out.println("Intancias");
+	}
+
+	
+
+}

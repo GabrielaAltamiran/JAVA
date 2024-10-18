@@ -1,0 +1,9 @@
+package com.krakedev.presistencia.test;
+
+public class TestActualizarTransaccion {
+
+	public static void main(String[] args) {
+		//TestActualizarTransaccion
+	}
+
+}

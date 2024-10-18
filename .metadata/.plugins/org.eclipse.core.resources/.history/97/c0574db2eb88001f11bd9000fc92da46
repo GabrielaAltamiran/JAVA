@@ -1,0 +1,14 @@
+package com.krakedev.presistencia.test;
+
+import com.krakedev.presistencia.servicios.AdminPersonas;
+
+public class TestActualizar {
+
+	public static void main(String[] args) {
+		AdminPersonas ap = new AdminPersonas();
+		System.out.println(ap);
+		
+
+	}
+
+}

@@ -1,0 +1,28 @@
+package com.krakedev.presistencia.test;
+
+import java.util.Date;
+
+import com.krakedev.presistencia.entidades.EstadoCivil;
+import com.krakedev.presistencia.entidades.Persona;
+import com.krakedev.presistencia.servicios.AdminPersonas;
+import com.krakedev.presitencia.utils.Convertidor;
+
+public class TestAdminPersona {
+
+	public static void main(String[] args) {
+		EstadoCivil ec = new EstadoCivil("U", "Union Libre");
+		Persona p = new Persona("1231540912","Karen","Mendez",ec);
+		try {
+
+			p.setHora_nacimiento(null);
+			p.setFecha_nacimiento(null);
+			AdminPersonas.insertar(p);
+			Date fechaDate = Convertidor.convertirFecha("2024/07/29");
+			Date horaDate = Convertidor.convertiHora(" 12:09:02");
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println(e.getMessage());
+		}
+	}
+
+}

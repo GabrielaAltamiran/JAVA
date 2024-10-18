@@ -1,0 +1,51 @@
+package com.krakedev.presistencia.servicios;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.sql.Time;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import com.krakedev.presistencia.entidades.Transacciones;
+import com.krakedev.presitencia.utils.Conexionbdd;
+
+
+public class AdminTransacciones {
+	private static final Logger LOGGER=LogManager.getLogger(AdminTransacciones.class);
+	public static void insertar(Transacciones transaccion)throws Exception  {
+		Connection con = null;
+		PreparedStatement ps;
+		LOGGER.trace("Transaccion a insertar>>>> "+transaccion);
+		try {
+			//ABRIR CONEXION
+			con = Conexionbdd.conectar();
+			ps = con.prepareStatement("insert into transacciones(codigo,numero_cuenta,monto,tipo,fecha,hora)" + "values(?,?,?,?,?,?)");
+			ps.setInt(1, transaccion.getCodigo());
+			ps.setString(2, transaccion.getNumero_cuenta());
+			System.out.println("SAL");
+			ps.setBigDecimal(3, transaccion.getMonto());
+			ps.setString(4, transaccion.getTipo());
+			ps.setDate(5, new java.sql.Date(transaccion.getHora().getTime()));
+			ps.setTime(6, new Time(transaccion.getFecha().getTime()));
+			ps.executeUpdate();
+			
+		} catch (Exception e) {
+			LOGGER.error("Error al insertar",e);
+			throw new Exception("Error al insertar");
+		}finally {
+			// CERRAR CONEXION
+			try {
+				con.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				LOGGER.error("Error con la base de dato",e);
+				throw new Exception("Error con la base de dato"); //Aqui va ya que no es solo "Exception" si no es "SQLException" y creamo una nueva.
+			}
+		}
+
+		
+	
+	}
+}

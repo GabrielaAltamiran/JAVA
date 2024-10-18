@@ -1,0 +1,29 @@
+package com.krakedev.presistencia.test;
+
+import java.math.BigDecimal;
+import java.util.Date;
+
+import com.krakedev.presistencia.entidades.Transacciones;
+import com.krakedev.presistencia.servicios.AdminTransacciones;
+import com.krakedev.presitencia.utils.Convertidor;
+
+public class TestAdminTransacciones {
+
+	public static void main(String[] args) {
+		Transacciones T = new Transacciones(29,"09432",new BigDecimal(78.36),"D");
+		try {
+			Date fechaDate = Convertidor.convertirFecha(" 2024/07/29");
+			Date horaDate = Convertidor.convertiHora(" 13:34:05");
+			
+			T.setHora(horaDate);
+			T.setFecha(fechaDate);
+			T.setMonto(new BigDecimal(2345.97));
+			AdminTransacciones.insertar(T);
+
+		} catch (Exception e) {			
+			System.out.println("Error en el sistema: "+e.getMessage());
+		}
+
+	}
+
+}

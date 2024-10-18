@@ -1,0 +1,9 @@
+package com.krakedev.presistencia.test;
+
+public class TestAdminPersona {
+
+	public static void main(String[] args) {
+
+	}
+
+}

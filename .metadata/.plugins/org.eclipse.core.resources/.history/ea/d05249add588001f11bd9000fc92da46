@@ -1,0 +1,48 @@
+package com.krakedev.presistencia.servicios;
+
+import java.math.BigDecimal;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.sql.Time;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import com.krakedev.presistencia.entidades.Persona;
+import com.krakedev.presitencia.utils.Conexionbdd;
+public class AdminPersonas {
+	public static void insertar(Persona persona) throws Exception {
+		Connection con = null;
+		PreparedStatement ps;
+		try {
+			//Abrir conexion
+			con = Conexionbdd.conectar();
+			ps = con.prepareStatement("insert into personas(cedula,nombre,apellido,numero_hijos,estatura,cantidad_ahorrada,fecha_nacimiento,hora_nacimiento,codigo_estado_civil)"
+							+ "values (?,?,?,?,?,?,?,?,?)");
+			ps.setString(1, persona.getCedula()); // El insert en pgAdmin4 debe estar eliminado o no debe tener la misma llave pk
+			ps.setString(2, persona.getNombre());
+			ps.setString(3, persona.getApellido());
+			ps.setInt(4, persona.getNumero_hijos());
+			ps.setDouble(5, persona.getEstatura());
+			ps.setBigDecimal(6, persona.getCantidadAhorrada()); // Ayuda para cuando es una valor Money usamos "new BigDecimal(12098.98)"
+			ps.setString(9, persona.getEstado_civil().getCodigo());
+			ps.setDate(7, new java.sql.Date(persona.getFecha_nacimiento().getTime()));
+			ps.setTime(8, new Time(persona.getHora_nacimiento().getTime()));
+			ps.executeUpdate();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw e;
+			
+		} finally {
+			// CERRAR CONEXION
+			try {
+				con.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				throw e;
+			}
+		}
+	}
+}

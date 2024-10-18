@@ -1,0 +1,29 @@
+package com.krakedev.presistencia.test;
+
+import java.math.BigDecimal;
+import java.util.Date;
+
+import com.krakedev.presistencia.entidades.Transacciones;
+import com.krakedev.presistencia.servicios.AdminTransacciones;
+import com.krakedev.presitencia.utils.Convertidor;
+
+public class TestActualizarTransaccion {
+
+	public static void main(String[] args) {
+		Transacciones t = new Transacciones(29, "12389", new BigDecimal(12863.87), "D");
+		try {
+			Date fechaDate = Convertidor.convertirFecha(" 2020/03/07");
+			Date horaDate = Convertidor.convertiHora(" 20:43:12");
+			
+			t.setHora(horaDate);
+			t.setFecha(fechaDate);
+			AdminTransacciones.actualizar(t);
+
+		} catch (Exception e) {			
+			System.out.println("Error en el sistema: "+e.getMessage());
+		}
+
+		//TestActualizarTransaccion
+	}
+
+}

@@ -1,0 +1,15 @@
+package com.krakedev.presistencia.test;
+
+import com.krakedev.presistencia.entidades.EstadoCivil;
+import com.krakedev.presistencia.entidades.Persona;
+import com.krakedev.presistencia.servicios.AdminPersonas;
+
+public class TestAdminPersona {
+
+	public static void main(String[] args) {
+		EstadoCivil ec = new EstadoCivil("U", "Union Libre");
+		AdminPersonas.insertar(new Persona("1755841002","Alexandra","Nieto",ec));
+		AdminPersonas.insertar(new Persona("2341877345","Kevin","Teran",ec));
+	}
+
+}

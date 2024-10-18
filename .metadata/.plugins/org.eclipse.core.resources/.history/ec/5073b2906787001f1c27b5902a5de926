@@ -1,0 +1,38 @@
+package com.krakedev.conexionbdd;
+
+import java.math.BigDecimal;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+public class TestConexion {
+
+	public static void main(String[] args) {
+		Connection conection=null;
+		PreparedStatement ps = null;
+		
+	try {
+		Class.forName("org.postgresql.Driver");
+		conection=DriverManager.getConnection("jdbc:postgresql://localhost:5433/ejercios", "postgres", "gabriela29");
+		System.out.println("Conexion exitosa");
+		ps = conection.prepareStatement("insert into personas(cedula,nombre,apellido,numero_hijos,estatura,cantidad_ahorrada)"
+				+ "values (?,?,?,?,?,?)");
+		ps.setString(1, "1714616123"); //El insert en pgAdmin4 debe estar eliminado o no debe tener la misma llave pk
+		ps.setString(2, "Santiago");
+		ps.setString(3, "Mosquera");
+		ps.setInt(4, 2);
+		ps.setDouble(5, 1.45);
+		ps.setBigDecimal(6, new BigDecimal(12098.98)); //Ayuda para cuando es una valor Money usamos "new BigDecimal(12098.98)"
+		
+		ps.executeUpdate();
+		System.out.println("Ejecunta insert");
+		
+		
+	} catch (ClassNotFoundException | SQLException e) {
+		e.printStackTrace();
+	}
+
+	}
+
+}

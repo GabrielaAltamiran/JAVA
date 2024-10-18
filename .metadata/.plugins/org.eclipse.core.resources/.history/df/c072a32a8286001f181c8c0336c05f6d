@@ -1,0 +1,29 @@
+package com.krakedev.conexionbdd;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+public class TestConexion {
+
+	public static void main(String[] args) {
+		Connection conection=null;
+		PreparedStatement ps = null;
+		
+	try {
+		Class.forName("org.postgresql.Driver");
+		conection=DriverManager.getConnection("jdbc:postgresql://localhost:5433/ejercios", "postgres", "gabriela29");
+		System.out.println("Conexion exitosa");
+		ps = conection.prepareStatement("insert into proyecto_municipio values (?,?)");
+		ps.setInt(1, 1);
+		ps.setInt(1, 5);
+		
+		
+	} catch (ClassNotFoundException | SQLException e) {
+		e.printStackTrace();
+	}
+
+	}
+
+}

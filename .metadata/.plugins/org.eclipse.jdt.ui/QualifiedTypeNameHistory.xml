@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.util.logging.LogManager"/>
+    <fullyQualifiedTypeName name="java.util.Formatter.BigDecimalLayoutForm"/>
+    <fullyQualifiedTypeName name="com.krakedev.presitencia.utils.Convertidor"/>
+    <fullyQualifiedTypeName name="java.sql.Time"/>
+    <fullyQualifiedTypeName name="org.apache.logging.log4j.LogManager"/>
+    <fullyQualifiedTypeName name="org.apache.logging.log4j.Logger"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="com.krakedev.presitencia.utils.Conexionbdd"/>
+    <fullyQualifiedTypeName name="com.krakedev.presistencia.servicios.AdminPersonas"/>
+    <fullyQualifiedTypeName name="java.sql.Date"/>
+    <fullyQualifiedTypeName name="com.krakedev.presistencia.servicios.AdminTransacciones"/>
+</qualifiedTypeNameHistroy>
