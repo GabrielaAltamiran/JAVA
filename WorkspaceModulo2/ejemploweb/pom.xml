@@ -53,6 +53,11 @@
 			<artifactId>jersey-guava</artifactId>
 			<version>2.6</version>
 		</dependency>
+			<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>42.7.4</version>
+		</dependency>
 
 	</dependencies>
 
