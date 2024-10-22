@@ -19,10 +19,11 @@ public class Cliente {
 	
 	public Cliente() {
 	}
-	public Cliente(String cedula, String nombre) {
+	public Cliente(String cedula, String nombre, int numeroHijos) {
 		super();
 		this.cedula = cedula;
 		this.nombre = nombre;
+		this.Numero_Hijos = numeroHijos;
 	}
 	public String getCedula() {
 		return cedula;
